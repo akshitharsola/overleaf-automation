@@ -135,75 +135,6 @@ const parseAuthorInfo = (text: string): AuthorInfo | null => {
   };
 };
 
-// Helper function to detect and format bullet points
-const detectBulletPoints = (text: string): string => {
-  const lines = text.split('\n');
-  let formattedText = '';
-  let inBulletList = false;
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim();
-    
-    // Check if line is a bullet point
-    const isBulletPoint = (
-      line.startsWith('•') || 
-      line.startsWith('●') || 
-      line.startsWith('○') || 
-      line.startsWith('-') || 
-      line.startsWith('*') ||
-      /^\d+\./.test(line) || // numbered list
-      /^[a-zA-Z]\./.test(line) // lettered list
-    );
-    
-    if (isBulletPoint) {
-      if (!inBulletList) {
-        // Check if it's numbered/lettered list
-        if (/^\d+\./.test(line) || /^[a-zA-Z]\./.test(line)) {
-          formattedText += '\\begin{enumerate}\n';
-        } else {
-          formattedText += '\\begin{itemize}\n';
-        }
-        inBulletList = true;
-      }
-      
-      // Clean bullet point and add as list item
-      let cleanedLine = line.replace(/^[•●○\-\*]/, '').trim();
-      cleanedLine = cleanedLine.replace(/^\d+\./, '').trim();
-      cleanedLine = cleanedLine.replace(/^[a-zA-Z]\./, '').trim();
-      
-      formattedText += `\\item ${cleanedLine}\n`;
-    } else {
-      if (inBulletList && line === '') {
-        // Empty line might end the list, but wait for next non-empty line
-        continue;
-      } else if (inBulletList && line !== '') {
-        // Non-bullet line ends the list
-        if (formattedText.includes('\\begin{enumerate}')) {
-          formattedText += '\\end{enumerate}\n';
-        } else {
-          formattedText += '\\end{itemize}\n';
-        }
-        inBulletList = false;
-        formattedText += line + '\n';
-      } else {
-        // Regular line
-        formattedText += line + '\n';
-      }
-    }
-  }
-  
-  // Close any open list
-  if (inBulletList) {
-    if (formattedText.includes('\\begin{enumerate}')) {
-      formattedText += '\\end{enumerate}\n';
-    } else {
-      formattedText += '\\end{itemize}\n';
-    }
-  }
-  
-  return formattedText;
-};
-
 // Note: Using placeholder-based equation placement for exact positioning
 
 // Helper function to load mammoth dynamically
@@ -723,11 +654,8 @@ const detectTxtSections = (textLines: TextLine[], tableContent: Set<string>, tab
       contentWordCount += lineWordCount;
     }
     
-    // Apply bullet point detection to content
-    const processedContent = detectBulletPoints(content.trim()) || 'No content detected';
-    
-    section.content = processedContent;
-    section.contentPreview = processedContent.substring(0, 150) + (processedContent.length > 150 ? '...' : '');
+    section.content = content.trim() || 'No content detected';
+    section.contentPreview = content.trim().substring(0, 150) + (content.length > 150 ? '...' : '');
     section.wordCount = contentWordCount;
   });
 
