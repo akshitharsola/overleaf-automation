@@ -1,0 +1,40 @@
+{
+  "projectName": "overleaf-automation",
+  "projectOwner": "akshitharsola",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "akshitharsola",
+      "name": "Akshit Harsola",
+      "avatar_url": "https://avatars.githubusercontent.com/u/akshitharsola?v=4",
+      "profile": "https://github.com/akshitharsola",
+      "contributions": [
+        "code",
+        "doc",
+        "design",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "anthropics",
+      "name": "Claude AI",
+      "avatar_url": "https://avatars.githubusercontent.com/u/109994925?s=200&v=4",
+      "profile": "https://github.com/anthropics",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas",
+        "review"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true
+}
