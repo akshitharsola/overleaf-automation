@@ -90,8 +90,37 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👥 Contributors
 
-- **Akshit Harsola** - *Project Lead & Developer* - [akshitharsola](https://github.com/akshitharsola)
-- **Claude (Anthropic)** - *AI Assistant & Co-Developer* - Development assistance, code optimization, and documentation
+Thanks to these wonderful people who have contributed to this project:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/akshitharsola">
+        <img src="https://github.com/akshitharsola.png" width="100px;" alt="Akshit Harsola"/>
+        <br />
+        <sub><b>Akshit Harsola</b></sub>
+      </a>
+      <br />
+      <sub>Project Lead & Developer</sub>
+      <br />
+      💻 📖 🎨 🚧
+    </td>
+    <td align="center">
+      <a href="https://github.com/anthropics">
+        <img src="https://avatars.githubusercontent.com/u/109994925?s=200&v=4" width="100px;" alt="Claude AI"/>
+        <br />
+        <sub><b>Claude AI</b></sub>
+      </a>
+      <br />
+      <sub>AI Assistant & Co-Developer</sub>
+      <br />
+      💻 📖 🤖 ⚡
+    </td>
+  </tr>
+</table>
+
+### Contribution Legend
+- 💻 Code - 📖 Documentation - 🎨 Design - 🚧 Maintenance - 🤖 AI Development - ⚡ Performance
 
 ## 🔗 Links
 
