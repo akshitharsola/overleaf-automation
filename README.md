@@ -88,9 +88,9 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 👥 Authors
+## 👥 Contributors
 
-- **Akshith Arsola** - *Project Lead & Developer* - [akshitharsola](https://github.com/akshitharsola)
+- **Akshit Harsola** - *Project Lead & Developer* - [akshitharsola](https://github.com/akshitharsola)
 - **Claude (Anthropic)** - *AI Assistant & Co-Developer* - Development assistance, code optimization, and documentation
 
 ## 🔗 Links
@@ -120,4 +120,4 @@ For support, please open an issue in the GitHub repository or contact the develo
 
 ---
 
-*Built with ❤️ by Akshith Arsola and Claude AI*
+*Built with ❤️ by Akshit Harsola and Claude AI*
